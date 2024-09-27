@@ -502,12 +502,17 @@ button {
   height: 40px;
   background-color: transparent;
   padding-left: 16px;
-
+  outline: transparent;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-input:focus {
+  border-color: #31d0aa;
 }
 
 .footer-form-btn {
@@ -525,14 +530,23 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-btn::placeholder {
   color: #fff;
 }
 
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #31d0aa;
+  border: none;
+}
+
 .footer-form-icon {
   margin-left: 16px;
+  fill: #fff;
 }
 
 /* Modal content */
